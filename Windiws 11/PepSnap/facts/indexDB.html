@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>DBName <input id="dbname" type="text" /></div>
+    <div>DBVersion <input id="dbversion" type="text" /></div>
+    <button id="opendb">Open Database</button>
+
+    <div>MediaId <input id="mid" type="text" /></div>
+    <div>MediaType <input id="mediatype" type="text" /></div>
+    <button id="addmedia">Add Media</button>
+
+    <div>
+        <button id="showmedia">Show Media</button>
+    </div>
+
+    <script>
+      let dbName = document.getElementById("dbname");
+      let dbVersion = document.getElementById("dbversion");
+      let openDbButton = document.getElementById("opendb");
+      let db;
+
+      let mid = document.getElementById("mid");
+      let mediaType = document.getElementById("mediatype");
+      let addMediaButton = document.getElementById("addmedia");
+      let showMediaButton = document.getElementById("showmedia");
+
+
+      openDbButton.addEventListener("click", openDB);
+      addMediaButton.addEventListener("click", addMedia);
+      showMediaButton.addEventListener("click" , showMedia);
+      
+      function showMedia(){
+          let txnObject = db.transaction("Media" , "readonly");
+          let mediaTable = txnObject.objectStore("Media");
+          
+          let cursorObject = mediaTable.openCursor(); // to iterate on all the rows / tuples
+          cursorObject.onsuccess = function(e){
+              let cursor = cursorObject.result;
+              if(cursor){
+                  console.log(cursor.value);
+                  cursor.continue();
+              }
+
+          }
+
+      }
+
+      function addMedia() {
+        //   db me media add hojaega
+        let txnObject = db.transaction("Media", "readwrite"); // start transaction on mediaTable
+        let mediaTable = txnObject.objectStore("Media"); // this will get access to mediaTable
+
+        mediaTable.add({ mid: mid.value, type: mediaType.value }); // it will add this object in mediaTable or mediaStore
+
+        txnObject.onerror = function(e){
+            console.log("txn failed");
+            console.log(e);
+        }
+      }
+
+      function openDB() {
+        let dbOpenRequest = indexedDB.open(dbName.value, dbVersion.value); // db open hoga
+        console.log(dbOpenRequest);
+
+        dbOpenRequest.onupgradeneeded = function (e) {
+          alert("Inside on upgrade needed !!");
+          db = e.target.result;
+          db.createObjectStore("Media", { keyPath: "mid" });
+        };
+
+        dbOpenRequest.onsuccess = function (e) {
+          alert("Inside on success !!");
+          db = e.target.result;
+        };
+
+        dbOpenRequest.onerror = function (e) {
+          alert("Inside on error !!");
+        };
+      }
+    
+    </script>
+  </body>
+</html>

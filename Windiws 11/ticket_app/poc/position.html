@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+  </head>
+  <style>
+    .parent {
+      background: aquamarine;
+      padding: 10px;
+      /* position: relative; */
+      height: 200vh;
+    }
+
+    .child {
+      height: 50px;
+    }
+
+    .one {
+      background: antiquewhite;
+      position: sticky;
+      top: 2px;
+    }
+
+    .two {
+      background: aqua;
+      /* position: absolute; */
+      /* top: 0px; */
+      /* left: 0px; */
+    }
+
+    .three {
+      background: blueviolet;
+    }
+  </style>
+  <body>
+    <!-- position:relative => It means the element is out of the document flow and properites like top , left , bottom , and right can be set 
+         and it is relative to its own original position -->
+
+    <!-- position:absolute => 1. It is out of the document flow
+                                   2. The original space occupied by this element will be occupied by other elements 
+                                   3. top left is set on the basis of first non static position ancestor and if not found ancestory it will set accn to body-->
+
+    <div class="parent">
+      <div class="child one">Child 1</div>
+      <div class="child two">Child 2</div>
+      <div class="child three">Child 3</div>
+    </div>
+  </body>
+</html>

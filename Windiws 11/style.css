@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* /* background-image: url('bg.jpeg');  */
+    background-size: cover; 
+    overflow: hidden;
+    height: 100vh;
+}
+
+.taskbar {
+    cursor: pointer;
+    background-color: #f3f3f3;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    z-index: 111;
+    justify-content: center;
+}
+
+
+.search {
+    z-index: 110;
+    position: absolute;
+    /* bottom: 50px; */
+    height: 46%;
+    bottom: -655px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease-in;
+}
+.explor {
+    z-index: 110;
+    position: absolute;
+    /* bottom: 50px; */
+    height: 56%;
+    bottom: -655px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease-in;
+}
+.setting {
+    z-index: 110;
+    position: absolute;
+    /* bottom: 50px; */
+    height: 84%;
+    bottom: -655px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease-in;
+}
+.widgets{
+    z-index: 110;
+    position: absolute;
+    bottom: -3px;
+    height: 101%;
+    right: -655px;
+    width: 27%;
+    text-align: center;
+    transition: all 0.3s ease-in;  
+}
+.startmenu{
+    z-index: 110;
+    position: absolute;
+    /* bottom: 50px; */
+    height: 75%;
+    bottom: -655px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease-in;
+}
+/* .goog img{
+    width: -webkit-fill-available;
+    left: 0px;
+    border-radius: 8px;  
+} */
+.starttask img {
+    border-radius: 8px;
+}
+
+.right {
+    justify-self: flex-end;
+    position: absolute;
+    right: 0;
+    margin: 6px 0;
+    height: 85%;
+}
+
+.icons {
+    padding-right: 200px;
+    position: absolute;
+    padding: 32px;
+    padding-top: 11px;
+    display: flex;
+    color: black;
+    flex-direction: column;
+    justify-content: space-evenly;
+    word-break: break-all;
+}
+.zoom{
+    position: absolute;
+    left: 138px;
+    top: 10px;
+    cursor: pointer;
+    z-index: 110;
+    padding: 8px;
+    width: 60px;
+    text-align: center;
+    display: block;
+}
+
+.sticky{
+    position: absolute;
+    left: 138px;
+    top: 114px;
+    cursor: pointer;
+    z-index: 110;
+    padding: 8px;
+    width: 60px;
+    text-align: center;
+    display: block;
+}
+
+.google {
+    cursor: pointer;
+    z-index: 110;
+    padding: 8px;
+    width: 60px;
+    text-align: end;
+    display: block;
+}
+.this-pc{
+    cursor: pointer;
+    z-index: 110;
+    padding: 8px;
+    width: 60px;
+    text-align: end;
+    display: block;
+
+}
+.explorer{
+    cursor: pointer;
+    z-index: 110;
+    padding: 8px;
+    width: 60px;
+    text-align: end;
+    display: block;
+
+}
+.folder{
+    cursor: pointer;
+    z-index: 110;
+    padding: 8px;
+    width: 60px;
+    text-align: -webkit-center;
+    display: block;
+    word-break: normal;
+
+}
+.trash{
+    cursor: pointer;
+    z-index: 110;
+    padding: 8px;
+    width: 60px;
+    text-align: center;
+    display: block;
+
+}
+/* .task{
+    height: 41px;
+    z-index: 110;
+    width: 39px;
+    color: black;
+    position: absolute;
+    bottom: 0px;
+    left: 210px;
+} */
+.windwin{
+    position: absolute;
+    bottom: 2vh;
+    left: 37vw;
+    z-index: 112;
+    height: 3vh;
+    width: 3vw;
+    /* background-color: black; */
+}
+.widgetsd{
+    position: absolute;
+    bottom: 2vh;
+    left: 98vw;
+    z-index: 112;
+    height: 3vh;
+    width: 1vw;
+    /* background-color: black; */
+}
+
+.windsett{
+    position: absolute;
+    bottom: 2vh;
+    left: 46vw;
+    z-index: 112;
+    height: 3vh;
+    width: 3vw;
+    /* background-color: black; */
+}
+
+.windsearch{
+    position: absolute;
+    bottom: 2vh;
+    left: 40vw;
+    z-index: 112;
+    height: 3vh;
+    width: 2.9vw;
+    /* background-color: black; */
+}
+
+.windexplor{
+    position: absolute;
+    bottom: 2vh;
+    left: 50vw;
+    z-index: 112;
+    height: 3vh;
+    width: 3vw;
+    /* background-color: black; */
+}
+.search img{
+    height: 50vh;
+}
+
+#vid{
+    position: absolute;
+    left: -112px;
+    bottom: -460px;
+    z-index: 0;
+}
+.ph {
+    height: 728px;
+    width: max-content;
+}
+
+.notes{
+    position: absolute;
+    bottom: 53vh;
+    left: 45vw;
+    z-index: 112;
+    height: 5vh;
+    width: 3vw;
+    /* background-color: black; */
+}
+
+.camera{
+    position: absolute;
+    bottom: 66vh;
+    left: 59vw;
+    z-index: 112;
+    height: 5vh;
+    width: 3vw;
+    /* background-color: black; */
+}
+
+.paint{
+    position: absolute;
+    bottom: 52vh;
+    left: 52vw;
+    z-index: 112;
+    height: 5vh;
+    width: 3vw;
+    /* background-color: black; */
+
+}
+
+.calculator{
+    position: absolute;
+    bottom: 52vh;
+    left: 31vw;
+    z-index: 112;
+    height: 5vh;
+    width: 3vw;
+    /* background-color: black; */
+
+}

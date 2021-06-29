@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations</title>
+  </head>
+
+  <style>
+    .box {
+      height: 100px;
+      width: 100px;
+      background: red;
+      margin: 10px;
+    }
+
+    .one{
+        animation-name: fadeInFadeOut;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+    .two{
+        animation-name: slideBox;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+
+    .three{
+        border-radius: 50%;
+        animation-name: scaleInScaleOut;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes fadeInFadeOut{
+        0%{
+            opacity: 1;
+        }
+
+        50%{
+            opacity: 0.2;
+        }
+
+        100%{
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideBox{
+        0%{
+            transform: translateX(0);
+        }
+
+        50%{
+            transform: translateX(100vw);
+        }
+
+        100%{
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes scaleInScaleOut{
+        0%{
+            transform: scale(1);
+        }
+
+        50%{
+            transform: scale(1.2);
+        }
+
+        100%{
+            transform: scale(1);
+        }
+    }
+
+  </style>
+
+  <body>
+    <div class="box one"></div>
+
+    <div class="box two"></div>
+
+    <div class="box three"></div>
+  </body>
+</html>

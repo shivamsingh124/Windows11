@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.video-container {
+    height: 100vh;
+    width: 100vw;
+    background: black;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+}
+
+.controls {
+    position: absolute;
+    top: 25vh;
+    right: 5vw;
+    /* border: 1px solid red; */
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 160px;
+    z-index: 3;
+    align-items: center;
+}
+
+.controls > div {
+    width: 50%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#record {
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.inner-record {
+    height: 70%;
+    width: 70%;
+    background: red;
+    border-radius: 50%;
+}
+
+#capture {
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.inner-capture {
+    height: 70%;
+    width: 70%;
+    background: white;
+    border-radius: 50%;
+}
+
+.animate-record {
+    animation-name: scaleInScaleOut;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.animate-capture {
+    animation-name: scaleInScaleOut;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.video-filters {
+    position: absolute;
+    top: 10vh;
+    /* border: 1px solid white; */
+    left: 10vh;
+    z-index: 3;
+}
+
+.filter {
+    height: 14vh;
+    width: 7vw;
+    /* background: aquamarine; */
+    /* border: 1px solid white; */
+    border: 1px solid white;
+    background-image: url("https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-size: cover;
+    background-blend-mode: soft-light;
+}
+
+.filter-div {
+    position: absolute;
+    top: 0px;
+    height: 100vh;
+    width: 100vw;
+}
+
+.zoom {
+    flex-direction: column;
+    /* border: 1px solid white; */
+}
+
+.zoom div {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: black; */
+    width: 100%;
+}
+
+.fas {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.gallery-btn {
+    background: black;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+@keyframes scaleInScaleOut {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
