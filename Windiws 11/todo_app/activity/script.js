@@ -1,4 +1,4 @@
-let addTodoButton = document.querySelector(".add_todo");
+let addTodoButton = document.querySelector(".add-todo");
 let todoInput = document.querySelector(".todo-input");
 let todosList = document.querySelector(".todos-list-container");
 
@@ -22,19 +22,6 @@ function addTodo() {
 }
 
 function appendTodo(todo) {
-//   <!-- <div class="todo-input">
-//   <p class="todo-input">Learn Css</p>
-//   <button class="delete-todo">DELETE</button>
-// </div>
-// <div class="todo-input">
-//   <p class="todo-input">LEARN HTML</p>
-//   <button class="delete-todo">DELETE</button>
-// </div>
-// <div class="todo-input">
-//   <p class="todo-input">LEARN REACT</p>
-//   <button class="delete-todo">DELETE</button>
-// </div> -->
-
   let todoItemDiv = document.createElement("div");
   todoItemDiv.classList.add("todo-item");
   // <div class="todo-item"> </div>
@@ -57,6 +44,6 @@ function appendTodo(todo) {
   todosList.append(todoItemDiv);
 }
 
-function deleteTodo(e) {  // e --> button uske parent ko hatana hai
+function deleteTodo(e) {
   e.target.parentNode.remove();
 }

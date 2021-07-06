@@ -105,8 +105,8 @@ function capturePhotoFun() {
 
   //   canvas
   let canvas = document.createElement("canvas");
-  canvas.width = 640; //video width
-  canvas.height = 480; // video height
+  canvas.width = videoElement.videoWidth; //video width
+  canvas.height = videoElement.videoHeight; // video height
 
   let ctx = canvas.getContext("2d");
 
