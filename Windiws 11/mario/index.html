@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPACEX</title>
+  </head>
+  <style>
+  
+    #board {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      margin: 40px auto;
+      border: 6px solid rgb(247, 244, 244);
+      background-color:#0870e8;
+      overflow: hidden;
+      border-radius: 25px;
+      background-image:url("background1.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+    
+    #rocket {
+      position: absolute;
+      width: 40px;
+      height: 48px;
+      background: url("rocket.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      left: 0px;
+      top: 50%;
+    }
+
+    .bullets {
+      position: absolute;
+      bottom: 40px;
+      left: 51%;
+      width: 20px;
+      height: 20px;
+      background: url("bullet.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .alien {
+      position: absolute;
+      top: 0px;
+      width: 50px;
+      height: 50px;
+      background: url("alien.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    body{
+      background-size: cover;
+      background-image:url("background.jpg");
+      /* background-repeat: no-repeat; */
+    }
+    
+  </style>
+  
+  <body>
+    <div id="board">
+      <div class="alien"></div>
+      <div id="rocket"></div>
+    </div>
+  </body>
+  <script src="script.js" defer></script>
+</html>
